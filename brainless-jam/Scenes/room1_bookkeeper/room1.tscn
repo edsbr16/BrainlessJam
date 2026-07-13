@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcgkd2u22u0fu" path="res://Assets/Sprites/Room1 Books/rugGreen.png" id="4_61hrm"]
 [ext_resource type="Texture2D" uid="uid://cptnw4qdisisj" path="res://Assets/Sprites/Room1 Books/wallpaper2.png" id="4_x82i5"]
 [ext_resource type="Texture2D" uid="uid://b5a51ni0spjhc" path="res://Assets/Sprites/Room1 Books/rugLong.png" id="6_x82i5"]
+[ext_resource type="Script" uid="uid://bojb768qudlpq" path="res://Scenes/room1_bookkeeper/entryway.gd" id="9_e70ka"]
 [ext_resource type="Texture2D" uid="uid://cqo86k1wot8u7" path="res://Assets/Sprites/Room1 Books/bookshelfSide.png" id="9_wcuau"]
 [ext_resource type="Texture2D" uid="uid://bivyxhptcb3nx" path="res://Assets/Sprites/Room1 Books/bookshelf.png" id="10_vn8wn"]
 [ext_resource type="Texture2D" uid="uid://cny6t8yws7sqf" path="res://Assets/Sprites/Room1 Books/booksStack1.png" id="14_dt6yy"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dbpbrbkrkt4io" path="res://Assets/Sprites/Room1 Books/desk2drawers2.png" id="27_l814r"]
 [ext_resource type="Texture2D" uid="uid://dbicq0ndu5ggf" path="res://Assets/Sprites/Room1 Books/desk2drawersSide.png" id="28_pknr0"]
 [ext_resource type="Texture2D" uid="uid://cw602e7onqm42" path="res://Assets/Sprites/Room1 Books/desk.png" id="29_86yvr"]
+[ext_resource type="PackedScene" uid="uid://djouu44wxpwuu" path="res://Scenes/Player/player.tscn" id="35_2jglh"]
 [ext_resource type="Texture2D" uid="uid://b3yvar7d2cxbb" path="res://Assets/Sprites/Room1 Books/diningTablelarge.png" id="35_2qeii"]
 [ext_resource type="Texture2D" uid="uid://by6g2b74xaiiq" path="res://Assets/Sprites/Room1 Books/easelDark.png" id="39_h6eba"]
 [ext_resource type="Texture2D" uid="uid://byxdvu7wvcqi1" path="res://Assets/Sprites/Room1 Books/easelLight.png" id="40_o5hl4"]
@@ -118,6 +120,36 @@ sources/5 = SubResource("TileSetAtlasSource_airya")
 sources/6 = SubResource("TileSetAtlasSource_dto52")
 sources/7 = SubResource("TileSetAtlasSource_4ng7k")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jglh"]
+size = Vector2(18, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oue4"]
+size = Vector2(320, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_us1qg"]
+size = Vector2(146, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aedsq"]
+size = Vector2(153, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cskel"]
+size = Vector2(1.5, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2mqt"]
+size = Vector2(1.5, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8unjh"]
+size = Vector2(13, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eudwp"]
+size = Vector2(100, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_622cn"]
+size = Vector2(22, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdjlh"]
+size = Vector2(12, 49)
+
 [node name="Room1" type="Node2D" unique_id=2045907838]
 
 [node name="Floor and wall" type="TileMapLayer" parent="." unique_id=1268628322]
@@ -128,52 +160,119 @@ tile_set = SubResource("TileSet_4ng7k")
 position = Vector2(155, 164)
 texture = ExtResource("41_2xqni")
 
-[node name="Bookshelf" type="Sprite2D" parent="." unique_id=1619478616]
+[node name="Area2D" type="Area2D" parent="Entryway" unique_id=1028615420]
+script = ExtResource("9_e70ka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entryway/Area2D" unique_id=1311434459]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_2jglh")
+
+[node name="Walls" type="Node2D" parent="." unique_id=924147071]
+
+[node name="WallTop" type="StaticBody2D" parent="Walls" unique_id=1485522896]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallTop" unique_id=956630088]
+position = Vector2(160, 9)
+shape = SubResource("RectangleShape2D_6oue4")
+
+[node name="WallBottom" type="StaticBody2D" parent="Walls" unique_id=1975629696]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallBottom" unique_id=1884817]
+position = Vector2(73, 178)
+shape = SubResource("RectangleShape2D_us1qg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/WallBottom" unique_id=1125936756]
+position = Vector2(240.5, 178)
+shape = SubResource("RectangleShape2D_aedsq")
+
+[node name="WallLeft" type="StaticBody2D" parent="Walls" unique_id=1270047833]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft" unique_id=1005299800]
+position = Vector2(0.25, 121)
+shape = SubResource("RectangleShape2D_cskel")
+
+[node name="WallRight" type="StaticBody2D" parent="Walls" unique_id=71486971]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight" unique_id=1595630366]
+position = Vector2(318.75, 123)
+shape = SubResource("RectangleShape2D_e2mqt")
+
+[node name="Stands" type="Node2D" parent="." unique_id=856150286]
+
+[node name="BookShelfs" type="StaticBody2D" parent="Stands" unique_id=1880590952]
+
+[node name="BookshelfBackWall" type="Sprite2D" parent="Stands/BookShelfs" unique_id=1619478616]
 position = Vector2(57, 22)
 texture = ExtResource("10_vn8wn")
 
-[node name="Bookshelf2" type="Sprite2D" parent="Bookshelf" unique_id=204361749]
+[node name="Bookshelf2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=204361749]
 position = Vector2(-29, 0)
 texture = ExtResource("10_vn8wn")
 
-[node name="Bookshelf" type="Sprite2D" parent="Bookshelf" unique_id=81183527]
+[node name="Bookshelf" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=81183527]
 position = Vector2(29, 0)
 texture = ExtResource("10_vn8wn")
 
-[node name="BookshelfSide" type="Sprite2D" parent="." unique_id=658714100]
+[node name="BookshelfLeftSide" type="Sprite2D" parent="Stands/BookShelfs" unique_id=658714100]
 position = Vector2(12, 22)
 texture = ExtResource("9_wcuau")
 
-[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide" unique_id=163627667]
+[node name="BookshelfSide" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=163627667]
 position = Vector2(0, 10)
 texture = ExtResource("9_wcuau")
 
-[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide/BookshelfSide" unique_id=467142933]
-position = Vector2(0, 10)
+[node name="BookshelfSide2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=467142933]
+position = Vector2(0, 20)
 texture = ExtResource("9_wcuau")
 
-[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide/BookshelfSide/BookshelfSide" unique_id=372682940]
-position = Vector2(0, 10)
+[node name="BookshelfSide3" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=372682940]
+position = Vector2(0, 30)
 texture = ExtResource("9_wcuau")
 
-[node name="Cabinet1" type="Sprite2D" parent="." unique_id=2098838985]
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=442540318]
+position = Vector2(7.5, 25.5)
+shape = SubResource("RectangleShape2D_8unjh")
+
+[node name="CollisionShapeBack" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=1209248262]
+position = Vector2(50, 10.5)
+shape = SubResource("RectangleShape2D_eudwp")
+
+[node name="Cabinets" type="StaticBody2D" parent="Stands" unique_id=1262127392]
+
+[node name="Cabinet1" type="Sprite2D" parent="Stands/Cabinets" unique_id=2098838985]
 position = Vector2(263, 26)
 texture = ExtResource("16_3qjdm")
 
-[node name="Cabinet1Side2" type="Sprite2D" parent="." unique_id=1048487955]
+[node name="Cabinet1Side2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1048487955]
 position = Vector2(306, 21)
 texture = ExtResource("17_pigo1")
 
-[node name="Cabinet1Side4" type="Sprite2D" parent="." unique_id=1318959443]
+[node name="Cabinet1Side4" type="Sprite2D" parent="Stands/Cabinets" unique_id=1318959443]
 position = Vector2(306, 28)
 texture = ExtResource("17_pigo1")
 
-[node name="Cabinet1Side" type="Sprite2D" parent="." unique_id=1418261936]
+[node name="Cabinet1Side" type="Sprite2D" parent="Stands/Cabinets" unique_id=1418261936]
 position = Vector2(306, 35)
 texture = ExtResource("17_pigo1")
 
+[node name="Desk2DrawersSide2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1752331236]
+position = Vector2(306, 47)
+texture = ExtResource("28_pknr0")
+
+[node name="Desk2DrawersSide" type="Sprite2D" parent="Stands/Cabinets" unique_id=1612897180]
+position = Vector2(306, 55)
+texture = ExtResource("28_pknr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=957987440]
+position = Vector2(263, 17.5)
+shape = SubResource("RectangleShape2D_622cn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=1533975234]
+position = Vector2(314, 28.5)
+shape = SubResource("RectangleShape2D_cdjlh")
+
 [node name="CoatHanger" type="Sprite2D" parent="." unique_id=1636032222]
-position = Vector2(307, 157)
+position = Vector2(303, 154)
 texture = ExtResource("21_h86e8")
 
 [node name="Desk2Drawers2" type="Sprite2D" parent="." unique_id=412007370]
@@ -183,14 +282,6 @@ texture = ExtResource("27_l814r")
 [node name="Painting3" type="Sprite2D" parent="." unique_id=2080793725]
 position = Vector2(142, 14)
 texture = ExtResource("63_om4x1")
-
-[node name="Desk2DrawersSide2" type="Sprite2D" parent="." unique_id=1752331236]
-position = Vector2(306, 47)
-texture = ExtResource("28_pknr0")
-
-[node name="Desk2DrawersSide" type="Sprite2D" parent="." unique_id=1612897180]
-position = Vector2(306, 55)
-texture = ExtResource("28_pknr0")
 
 [node name="Desk" type="Sprite2D" parent="." unique_id=1078567943]
 position = Vector2(118, 28)
@@ -234,17 +325,17 @@ position = Vector2(157, 84)
 texture = ExtResource("54_88ybq")
 
 [node name="RedSuiteOneSeaterExport" type="Sprite2D" parent="." unique_id=1389534494]
-position = Vector2(16.999994, 139)
+position = Vector2(26.999994, 131)
 rotation = -0.5235988
 texture = ExtResource("70_aq8i0")
 
 [node name="RedSuiteOneSeaterExport2" type="Sprite2D" parent="." unique_id=562373968]
-position = Vector2(61, 136)
+position = Vector2(71, 130)
 rotation = 0.5235988
 texture = ExtResource("70_aq8i0")
 
 [node name="ChessBoard" type="Sprite2D" parent="." unique_id=597618714]
-position = Vector2(39, 147)
+position = Vector2(48, 147)
 texture = ExtResource("19_vbhr4")
 
 [node name="WallCandle" type="Sprite2D" parent="." unique_id=1726143827]
@@ -260,7 +351,7 @@ position = Vector2(118, 9)
 texture = ExtResource("76_uiiyi")
 
 [node name="Stool" type="Sprite2D" parent="." unique_id=1077940752]
-position = Vector2(299, 104)
+position = Vector2(304, 107)
 texture = ExtResource("79_l814r")
 
 [node name="SmallCrate" type="Sprite2D" parent="." unique_id=350003192]
@@ -268,9 +359,15 @@ position = Vector2(288, 30)
 texture = ExtResource("82_61bso")
 
 [node name="EaselLight2" type="Sprite2D" parent="." unique_id=1058181020]
-position = Vector2(284, 95)
+position = Vector2(289, 93)
 texture = ExtResource("40_o5hl4")
 
 [node name="EaselDark2" type="Sprite2D" parent="." unique_id=1202182102]
-position = Vector2(302, 88)
+position = Vector2(308, 86)
 texture = ExtResource("39_h6eba")
+
+[node name="player" parent="." unique_id=121331350 instance=ExtResource("35_2jglh")]
+position = Vector2(158, 83)
+
+[connection signal="body_entered" from="Entryway/Area2D" to="Entryway/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Entryway/Area2D" to="Entryway/Area2D" method="_on_body_exited"]
