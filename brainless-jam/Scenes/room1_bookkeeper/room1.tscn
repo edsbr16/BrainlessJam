@@ -1,0 +1,276 @@
+[gd_scene format=4 uid="uid://yat0qkotwgg5"]
+
+[ext_resource type="Texture2D" uid="uid://0wyyooibrc8h" path="res://Assets/Sprites/Room1 Books/floorboardsDark2.png" id="1_taxfl"]
+[ext_resource type="Texture2D" uid="uid://dnxrdqspdu817" path="res://Assets/Sprites/Room1 Books/floorboardsDark.png" id="2_nym3l"]
+[ext_resource type="Texture2D" uid="uid://ue3o1e6k5kx7" path="res://Assets/Sprites/Room1 Books/Wallpaper1.png" id="3_61hrm"]
+[ext_resource type="Texture2D" uid="uid://bbyinmrk22y00" path="res://Assets/Sprites/Room1 Books/rugDark.png" id="3_nym3l"]
+[ext_resource type="Texture2D" uid="uid://dcgkd2u22u0fu" path="res://Assets/Sprites/Room1 Books/rugGreen.png" id="4_61hrm"]
+[ext_resource type="Texture2D" uid="uid://cptnw4qdisisj" path="res://Assets/Sprites/Room1 Books/wallpaper2.png" id="4_x82i5"]
+[ext_resource type="Texture2D" uid="uid://b5a51ni0spjhc" path="res://Assets/Sprites/Room1 Books/rugLong.png" id="6_x82i5"]
+[ext_resource type="Texture2D" uid="uid://cqo86k1wot8u7" path="res://Assets/Sprites/Room1 Books/bookshelfSide.png" id="9_wcuau"]
+[ext_resource type="Texture2D" uid="uid://bivyxhptcb3nx" path="res://Assets/Sprites/Room1 Books/bookshelf.png" id="10_vn8wn"]
+[ext_resource type="Texture2D" uid="uid://cny6t8yws7sqf" path="res://Assets/Sprites/Room1 Books/booksStack1.png" id="14_dt6yy"]
+[ext_resource type="Texture2D" uid="uid://c07obvawgc6s" path="res://Assets/Sprites/Room1 Books/book.png" id="15_nqmtt"]
+[ext_resource type="Texture2D" uid="uid://b77y3kr5jlf5u" path="res://Assets/Sprites/Room1 Books/cabinet1.png" id="16_3qjdm"]
+[ext_resource type="Texture2D" uid="uid://ctfj0l8m5dnxh" path="res://Assets/Sprites/Room1 Books/cabinet1Side.png" id="17_pigo1"]
+[ext_resource type="Texture2D" uid="uid://dg0fre7oa68ni" path="res://Assets/Sprites/Room1 Books/chessBoard.png" id="19_vbhr4"]
+[ext_resource type="Texture2D" uid="uid://dm38w6xoobm0w" path="res://Assets/Sprites/Room1 Books/clock.png" id="20_c8oo0"]
+[ext_resource type="Texture2D" uid="uid://dsq6r2q14wbsx" path="res://Assets/Sprites/Room1 Books/coatHanger.png" id="21_h86e8"]
+[ext_resource type="Texture2D" uid="uid://dbpbrbkrkt4io" path="res://Assets/Sprites/Room1 Books/desk2drawers2.png" id="27_l814r"]
+[ext_resource type="Texture2D" uid="uid://dbicq0ndu5ggf" path="res://Assets/Sprites/Room1 Books/desk2drawersSide.png" id="28_pknr0"]
+[ext_resource type="Texture2D" uid="uid://cw602e7onqm42" path="res://Assets/Sprites/Room1 Books/desk.png" id="29_86yvr"]
+[ext_resource type="Texture2D" uid="uid://b3yvar7d2cxbb" path="res://Assets/Sprites/Room1 Books/diningTablelarge.png" id="35_2qeii"]
+[ext_resource type="Texture2D" uid="uid://by6g2b74xaiiq" path="res://Assets/Sprites/Room1 Books/easelDark.png" id="39_h6eba"]
+[ext_resource type="Texture2D" uid="uid://byxdvu7wvcqi1" path="res://Assets/Sprites/Room1 Books/easelLight.png" id="40_o5hl4"]
+[ext_resource type="Texture2D" uid="uid://bj3etn3r0inr0" path="res://Assets/Sprites/Room1 Books/entryway.png" id="41_2xqni"]
+[ext_resource type="Texture2D" uid="uid://dfhkjb41op5d8" path="res://Assets/Sprites/Room1 Books/keySilver.png" id="51_bc5ga"]
+[ext_resource type="Texture2D" uid="uid://bufogbi8q3c6u" path="res://Assets/Sprites/Room1 Books/lanternLit1.png" id="54_88ybq"]
+[ext_resource type="Texture2D" uid="uid://dx2o4itkrxj55" path="res://Assets/Sprites/Room1 Books/mirror1.png" id="58_2uvul"]
+[ext_resource type="Texture2D" uid="uid://cnbwni5im7r40" path="res://Assets/Sprites/Room1 Books/painting2.png" id="62_2txor"]
+[ext_resource type="Texture2D" uid="uid://d2woehjripadi" path="res://Assets/Sprites/Room1 Books/painting3.png" id="63_om4x1"]
+[ext_resource type="Texture2D" uid="uid://oo0yobiu6saf" path="res://Assets/Sprites/Room1 Books/PurpleSuite.png" id="66_wgyqq"]
+[ext_resource type="Texture2D" uid="uid://dfawbkfgf6lw5" path="res://Assets/Sprites/Room1 Books/RedSuiteOneSeater-export.png" id="70_aq8i0"]
+[ext_resource type="Texture2D" uid="uid://bvm6sudt4qpwd" path="res://Assets/Sprites/Room1 Books/wallCandle.png" id="76_uiiyi"]
+[ext_resource type="Texture2D" uid="uid://ty6g4smop4yf" path="res://Assets/Sprites/Room1 Books/stool.png" id="79_l814r"]
+[ext_resource type="Texture2D" uid="uid://iaiaongd8xpd" path="res://Assets/Sprites/Room1 Books/smallCrate.png" id="82_61bso"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xyw7"]
+texture = ExtResource("2_nym3l")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x82i5"]
+texture = ExtResource("4_x82i5")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqpol"]
+texture = ExtResource("3_nym3l")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10bkm"]
+texture = ExtResource("4_61hrm")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_airya"]
+texture = ExtResource("1_taxfl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dto52"]
+texture = ExtResource("6_x82i5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ng7k"]
+texture = ExtResource("3_61hrm")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4ng7k"]
+sources/0 = SubResource("TileSetAtlasSource_5xyw7")
+sources/2 = SubResource("TileSetAtlasSource_x82i5")
+sources/3 = SubResource("TileSetAtlasSource_fqpol")
+sources/4 = SubResource("TileSetAtlasSource_10bkm")
+sources/5 = SubResource("TileSetAtlasSource_airya")
+sources/6 = SubResource("TileSetAtlasSource_dto52")
+sources/7 = SubResource("TileSetAtlasSource_4ng7k")
+
+[node name="Room1" type="Node2D" unique_id=2045907838]
+
+[node name="Floor and wall" type="TileMapLayer" parent="." unique_id=1268628322]
+tile_map_data = PackedByteArray("AAAGAAYABgABAAAAACAGAAcABQAAAAAAAAAHAAYABgACAAAAACAHAAcABQABAAAAAAAEAAQABQAAAAEAAAAEAAUABQAAAAAAAAAFAAQABQABAAEAAAAFAAUABgAAAAAAAAACAAQABQAAAAEAAAACAAUABQAAAAAAAAADAAQABQABAAEAAAADAAUABQABAAAAAAACAAIABQABAAEAAAACAAMABQAAAAAAAAADAAIABQAAAAEAAAADAAMABQABAAAAAAACAAAABwAAAAAAAAACAAEABwAAAAEAAAADAAAABwABAAAAAAADAAEABwABAAEAAAAAAAAABwAAAAAAAAAAAAEABwAAAAEAAAABAAAABwABAAAAAAABAAEABwABAAEAAAAAAAIABQAAAAEAAAAAAAMABQAAAAAAAAABAAIABQABAAEAAAABAAMABQABAAAAAAAAAAQABQAAAAEAAAAAAAUABQAAAAAAAAABAAQABQABAAEAAAABAAUABQABAAAAAAAAAAYABQAAAAEAAAAAAAcABQAAAAAAAAABAAYABQABAAEAAAABAAcABQABAAAAAAAAAAgABQAAAAEAAAAAAAkABQAAAAAAAAABAAgABQABAAEAAAABAAkABQABAAAAAAAAAAoABQAAAAEAAAAAAAsABAABAAMAAAABAAoABQABAAEAAAABAAsABAABAAMAAAACAAsABAACAAMAAAADAAoABQAAAAEAAAADAAsABAABAAMAAAACAAgABQAAAAEAAAACAAkABQABAAAAAAADAAgABQABAAEAAAADAAkABQAAAAAAAAAEAAgABQAAAAEAAAAEAAkABQABAAAAAAAFAAgABQABAAEAAAAFAAkABQAAAAAAAAAGAAgABQAAAAEAAAAGAAkABQABAAAAAAAHAAgABQABAAEAAAAHAAkABQAAAAAAAAAEAAoABQABAAEAAAAEAAsABAACAAMAAAAFAAoABQAAAAEAAAAFAAsABAABAAMAAAAGAAoABQABAAEAAAAGAAsABAACAAMAAAAHAAoABQAAAAEAAAAHAAsABAABAAMAAAAIAAoABQABAAEAAAAIAAsABAACAAMAAAAJAAoABQAAAAEAAAAJAAsABAABAAMAAAAKAAoABQABAAEAAAAKAAsABAACAAMAAAALAAoABQAAAAEAAAALAAsABAABAAMAAAAKAAgABQAAAAEAAAAKAAkABQABAAAAAAALAAgABQABAAEAAAALAAkABQAAAAAAAAAMAAgABQAAAAEAAAAMAAkABQABAAAAAAANAAgABQABAAEAAAANAAkABQAAAAAAAAAOAAgABQAAAAEAAAAOAAkABQABAAAAAAAPAAgABQABAAEAAAAPAAkABQAAAAAAAAAOAAoABQABAAEAAAAOAAsABAACAAMAAAAPAAoABQAAAAEAAAAPAAsABAABAAMAAAAMAAoABQABAAEAAAAMAAsABAACAAMAAAANAAoABQAAAAEAAAANAAsABAABAAMAAAAQAAoABQABAAEAAAAQAAsABAACAAMAAAARAAoABQAAAAEAAAARAAsABAABAAMAAAASAAoABQAAAAEAAAASAAsABAACAAMAAAATAAoABQABAAEAAAATAAsABAABAAMAAAASAAgABQAAAAEAAAASAAkABQAAAAAAAAATAAgABQABAAEAAAATAAkABQABAAAAAAASAAYABQAAAAEAAAASAAcABQAAAAAAAAATAAYABQABAAEAAAATAAcABQABAAAAAAASAAQABQAAAAEAAAASAAUABQAAAAAAAAATAAQABQABAAEAAAATAAUABQABAAAAAAASAAIABQAAAAEAAAASAAMABQAAAAAAAAATAAIABQABAAEAAAATAAMABQABAAAAAAASAAAABwAAAAAAAAASAAEABwAAAAEAAAATAAAABwABAAAAAAATAAEABwABAAEAAAAQAAAABwAAAAAAAAAQAAEABwAAAAEAAAARAAAABwABAAAAAAARAAEABwABAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAEAAAAPAAAABwABAAAAAAAPAAEABwABAAEAAAAMAAAABwAAAAAAAAAMAAEABwAAAAEAAAANAAAABwABAAAAAAANAAEABwABAAEAAAAKAAAABwAAAAAAAAAKAAEABwAAAAEAAAALAAAABwABAAAAAAALAAEABwABAAEAAAAIAAAABwAAAAAAAAAIAAEABwAAAAEAAAAJAAAABwABAAAAAAAJAAEABwABAAEAAAAGAAAABwAAAAAAAAAGAAEABwAAAAEAAAAHAAAABwABAAAAAAAHAAEABwABAAEAAAAEAAAABwAAAAAAAAAEAAEABwAAAAEAAAAFAAAABwABAAAAAAAFAAEABwABAAEAAAACAAYABQAAAAEAAAACAAcABQAAAAAAAAADAAYABQABAAEAAAADAAcABQABAAAAAAAEAAYABQAAAAEAAAAEAAcABQAAAAAAAAAFAAYABgAAAAAAACAFAAcABQABAAAAAAAGAAQABQAAAAEAAAAGAAUABgABAAAAAAAHAAUABgACAAAAAAAEAAIABQABAAEAAAAEAAMABQAAAAAAAAAFAAIABQAAAAEAAAAFAAMABQABAAAAAAAGAAIABQABAAEAAAAGAAMABQAAAAAAAAAHAAIABQAAAAEAAAAHAAMABQABAAAAAAAIAAIABQABAAEAAAAIAAMABQAAAAAAAAAJAAIABQAAAAEAAAAJAAMABQABAAAAAAAKAAIABQABAAEAAAAKAAMABQAAAAAAAAALAAIABQAAAAEAAAALAAMABQABAAAAAAAMAAIABQABAAEAAAAMAAMABQAAAAAAAAANAAIABQAAAAEAAAANAAMABQABAAAAAAAOAAIABQABAAEAAAAOAAMABQAAAAAAAAAPAAIABQAAAAEAAAAPAAMABQABAAAAAAAQAAIABQABAAEAAAAQAAMABQAAAAAAAAARAAIABQABAAEAAAARAAMABQABAAAAAAAQAAQABQAAAAEAAAAQAAUABQAAAAAAAAARAAQABQABAAEAAAARAAUABQABAAAAAAAQAAYABQAAAAEAAAAQAAcABQAAAAAAAAARAAYABQABAAEAAAARAAcABQABAAAAAAAQAAgABQAAAAEAAAAQAAkABQABAAAAAAARAAgABQABAAEAAAARAAkABQAAAAAAAAAIAAgABQAAAAEAAAAIAAkABQABAAAAAAAJAAgABQABAAEAAAAJAAkABQAAAAAAAAAIAAUABgADAAAAAAAJAAUABgAEAAAAAAAMAAUABgADAAAAAAANAAUABgAEAAAAAAAMAAYABgADAAAAACAMAAcABQAAAAAAAAANAAYABgAEAAAAACANAAcABQABAAAAAAAKAAYABgABAAAAACAKAAcABQAAAAAAAAALAAYABgACAAAAACALAAcABQABAAAAAAAIAAYABgADAAAAACAIAAcABQAAAAAAAAAJAAYABgAEAAAAACAJAAcABQABAAAAAAAKAAUABgABAAAAAAALAAUABgACAAAAAAAOAAQABQAAAAEAAAAOAAUABgAAAAAAABAPAAQABQABAAEAAAAPAAUABQABAAAAAAAOAAYABgAFAAAAACAOAAcABQAAAAAAAAAPAAYABQABAAEAAAAPAAcABQABAAAAAAACAAoABQABAAEAAAAHAAQABQABAAEAAAAIAAQABQAAAAEAAAAJAAQABQABAAEAAAAKAAQABQAAAAEAAAALAAQABQABAAEAAAAMAAQABQAAAAEAAAANAAQABQABAAEAAAA=")
+tile_set = SubResource("TileSet_4ng7k")
+
+[node name="Entryway" type="Sprite2D" parent="." unique_id=685032087]
+position = Vector2(155, 164)
+texture = ExtResource("41_2xqni")
+
+[node name="Bookshelf" type="Sprite2D" parent="." unique_id=1619478616]
+position = Vector2(57, 22)
+texture = ExtResource("10_vn8wn")
+
+[node name="Bookshelf2" type="Sprite2D" parent="Bookshelf" unique_id=204361749]
+position = Vector2(-29, 0)
+texture = ExtResource("10_vn8wn")
+
+[node name="Bookshelf" type="Sprite2D" parent="Bookshelf" unique_id=81183527]
+position = Vector2(29, 0)
+texture = ExtResource("10_vn8wn")
+
+[node name="BookshelfSide" type="Sprite2D" parent="." unique_id=658714100]
+position = Vector2(12, 22)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide" unique_id=163627667]
+position = Vector2(0, 10)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide/BookshelfSide" unique_id=467142933]
+position = Vector2(0, 10)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide" type="Sprite2D" parent="BookshelfSide/BookshelfSide/BookshelfSide" unique_id=372682940]
+position = Vector2(0, 10)
+texture = ExtResource("9_wcuau")
+
+[node name="Cabinet1" type="Sprite2D" parent="." unique_id=2098838985]
+position = Vector2(263, 26)
+texture = ExtResource("16_3qjdm")
+
+[node name="Cabinet1Side2" type="Sprite2D" parent="." unique_id=1048487955]
+position = Vector2(306, 21)
+texture = ExtResource("17_pigo1")
+
+[node name="Cabinet1Side4" type="Sprite2D" parent="." unique_id=1318959443]
+position = Vector2(306, 28)
+texture = ExtResource("17_pigo1")
+
+[node name="Cabinet1Side" type="Sprite2D" parent="." unique_id=1418261936]
+position = Vector2(306, 35)
+texture = ExtResource("17_pigo1")
+
+[node name="CoatHanger" type="Sprite2D" parent="." unique_id=1636032222]
+position = Vector2(307, 157)
+texture = ExtResource("21_h86e8")
+
+[node name="Desk2Drawers2" type="Sprite2D" parent="." unique_id=412007370]
+position = Vector2(189, 30)
+texture = ExtResource("27_l814r")
+
+[node name="Painting3" type="Sprite2D" parent="." unique_id=2080793725]
+position = Vector2(142, 14)
+texture = ExtResource("63_om4x1")
+
+[node name="Desk2DrawersSide2" type="Sprite2D" parent="." unique_id=1752331236]
+position = Vector2(306, 47)
+texture = ExtResource("28_pknr0")
+
+[node name="Desk2DrawersSide" type="Sprite2D" parent="." unique_id=1612897180]
+position = Vector2(306, 55)
+texture = ExtResource("28_pknr0")
+
+[node name="Desk" type="Sprite2D" parent="." unique_id=1078567943]
+position = Vector2(118, 28)
+texture = ExtResource("29_86yvr")
+
+[node name="DiningTablelarge" type="Sprite2D" parent="." unique_id=799246881]
+position = Vector2(157, 91)
+texture = ExtResource("35_2qeii")
+
+[node name="Painting2" type="Sprite2D" parent="." unique_id=48309853]
+position = Vector2(214, 17)
+texture = ExtResource("62_2txor")
+
+[node name="PurpleSuite" type="Sprite2D" parent="." unique_id=1044901515]
+position = Vector2(162, 30)
+texture = ExtResource("66_wgyqq")
+
+[node name="Book" type="Sprite2D" parent="." unique_id=469691692]
+position = Vector2(118, 20)
+texture = ExtResource("15_nqmtt")
+
+[node name="BooksStack1" type="Sprite2D" parent="." unique_id=1974223981]
+position = Vector2(184, 19)
+texture = ExtResource("14_dt6yy")
+
+[node name="Clock" type="Sprite2D" parent="." unique_id=417442743]
+position = Vector2(162, 13.000001)
+scale = Vector2(0.6874998, 0.640625)
+texture = ExtResource("20_c8oo0")
+
+[node name="Mirror1" type="Sprite2D" parent="." unique_id=1302742772]
+position = Vector2(240, 18)
+texture = ExtResource("58_2uvul")
+
+[node name="KeySilver" type="Sprite2D" parent="." unique_id=417395125]
+position = Vector2(139, 85)
+texture = ExtResource("51_bc5ga")
+
+[node name="LanternLit1" type="Sprite2D" parent="." unique_id=77409107]
+position = Vector2(157, 84)
+texture = ExtResource("54_88ybq")
+
+[node name="RedSuiteOneSeaterExport" type="Sprite2D" parent="." unique_id=1389534494]
+position = Vector2(16.999994, 139)
+rotation = -0.5235988
+texture = ExtResource("70_aq8i0")
+
+[node name="RedSuiteOneSeaterExport2" type="Sprite2D" parent="." unique_id=562373968]
+position = Vector2(61, 136)
+rotation = 0.5235988
+texture = ExtResource("70_aq8i0")
+
+[node name="ChessBoard" type="Sprite2D" parent="." unique_id=597618714]
+position = Vector2(39, 147)
+texture = ExtResource("19_vbhr4")
+
+[node name="WallCandle" type="Sprite2D" parent="." unique_id=1726143827]
+position = Vector2(288, 10)
+texture = ExtResource("76_uiiyi")
+
+[node name="WallCandle2" type="Sprite2D" parent="." unique_id=1776542130]
+position = Vector2(189, 10)
+texture = ExtResource("76_uiiyi")
+
+[node name="WallCandle3" type="Sprite2D" parent="." unique_id=1064351367]
+position = Vector2(118, 9)
+texture = ExtResource("76_uiiyi")
+
+[node name="Stool" type="Sprite2D" parent="." unique_id=1077940752]
+position = Vector2(299, 104)
+texture = ExtResource("79_l814r")
+
+[node name="SmallCrate" type="Sprite2D" parent="." unique_id=350003192]
+position = Vector2(288, 30)
+texture = ExtResource("82_61bso")
+
+[node name="EaselLight2" type="Sprite2D" parent="." unique_id=1058181020]
+position = Vector2(284, 95)
+texture = ExtResource("40_o5hl4")
+
+[node name="EaselDark2" type="Sprite2D" parent="." unique_id=1202182102]
+position = Vector2(302, 88)
+texture = ExtResource("39_h6eba")
