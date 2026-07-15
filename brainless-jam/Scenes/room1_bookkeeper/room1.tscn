@@ -142,7 +142,7 @@ size = Vector2(1.5, 116)
 size = Vector2(13, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eudwp"]
-size = Vector2(100, 9)
+size = Vector2(100, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_622cn"]
 size = Vector2(22, 15)
@@ -234,7 +234,7 @@ position = Vector2(7.5, 25.5)
 shape = SubResource("RectangleShape2D_8unjh")
 
 [node name="CollisionShapeBack" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=1209248262]
-position = Vector2(50, 10.5)
+position = Vector2(50, 13.5)
 shape = SubResource("RectangleShape2D_eudwp")
 
 [node name="Cabinets" type="StaticBody2D" parent="Stands" unique_id=1262127392]
