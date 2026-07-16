@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var has_key: bool = false
+
 @export var speed: float = 100.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
