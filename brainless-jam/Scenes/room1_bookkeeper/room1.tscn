@@ -230,7 +230,7 @@ animations = [{
 size = Vector2(13, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eudwp"]
-size = Vector2(100, 9)
+size = Vector2(100, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_622cn"]
 size = Vector2(22, 18)
@@ -350,7 +350,87 @@ shape = SubResource("RectangleShape2D_e2mqt")
 
 [node name="Decor" type="Node2D" parent="." unique_id=577711594]
 
+<<<<<<< HEAD
 [node name="Desk2Drawers2" type="Sprite2D" parent="Decor" unique_id=412007370]
+=======
+[node name="BookShelfs" type="StaticBody2D" parent="Stands" unique_id=1880590952]
+
+[node name="BookshelfBackWall" type="Sprite2D" parent="Stands/BookShelfs" unique_id=1619478616]
+position = Vector2(57, 22)
+texture = ExtResource("10_vn8wn")
+
+[node name="Bookshelf2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=204361749]
+position = Vector2(-29, 0)
+texture = ExtResource("10_vn8wn")
+
+[node name="Bookshelf" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=81183527]
+position = Vector2(29, 0)
+texture = ExtResource("10_vn8wn")
+
+[node name="BookshelfLeftSide" type="Sprite2D" parent="Stands/BookShelfs" unique_id=658714100]
+position = Vector2(12, 22)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=163627667]
+position = Vector2(0, 10)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=467142933]
+position = Vector2(0, 20)
+texture = ExtResource("9_wcuau")
+
+[node name="BookshelfSide3" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=372682940]
+position = Vector2(0, 30)
+texture = ExtResource("9_wcuau")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=442540318]
+position = Vector2(7.5, 25.5)
+shape = SubResource("RectangleShape2D_8unjh")
+
+[node name="CollisionShapeBack" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=1209248262]
+position = Vector2(50, 13.5)
+shape = SubResource("RectangleShape2D_eudwp")
+
+[node name="Cabinets" type="StaticBody2D" parent="Stands" unique_id=1262127392]
+
+[node name="Cabinet1" type="Sprite2D" parent="Stands/Cabinets" unique_id=2098838985]
+position = Vector2(263, 26)
+texture = ExtResource("16_3qjdm")
+
+[node name="Cabinet1Side2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1048487955]
+position = Vector2(306, 21)
+texture = ExtResource("17_pigo1")
+
+[node name="Cabinet1Side4" type="Sprite2D" parent="Stands/Cabinets" unique_id=1318959443]
+position = Vector2(306, 28)
+texture = ExtResource("17_pigo1")
+
+[node name="Cabinet1Side" type="Sprite2D" parent="Stands/Cabinets" unique_id=1418261936]
+position = Vector2(306, 35)
+texture = ExtResource("17_pigo1")
+
+[node name="Desk2DrawersSide2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1752331236]
+position = Vector2(306, 47)
+texture = ExtResource("28_pknr0")
+
+[node name="Desk2DrawersSide" type="Sprite2D" parent="Stands/Cabinets" unique_id=1612897180]
+position = Vector2(306, 55)
+texture = ExtResource("28_pknr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=957987440]
+position = Vector2(263, 17.5)
+shape = SubResource("RectangleShape2D_622cn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=1533975234]
+position = Vector2(314, 28.5)
+shape = SubResource("RectangleShape2D_cdjlh")
+
+[node name="CoatHanger" type="Sprite2D" parent="." unique_id=1636032222]
+position = Vector2(303, 154)
+texture = ExtResource("21_h86e8")
+
+[node name="Desk2Drawers2" type="Sprite2D" parent="." unique_id=412007370]
+>>>>>>> ec5b1a63aa3cc3d1bee7908c870f3413e1c41629
 position = Vector2(189, 30)
 texture = ExtResource("27_l814r")
 

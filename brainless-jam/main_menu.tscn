@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ddbapdmjo26r6"]
 
 [ext_resource type="Script" uid="uid://dgqruk7tit7hn" path="res://main_menu.gd" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://cprd74ah2acvh" path="res://Assets/Main_menu/door_closed.png" id="2_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://dwenkupmn4xbf" path="res://Assets/Main_menu/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/play/72px/play01.png" id="4_qe12f"]
 [ext_resource type="Texture2D" uid="uid://do8d47nxu35yp" path="res://Assets/Main_menu/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/play/72px/play03.png" id="5_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cprd74ah2acvh" path="res://Assets/Main_menu/Doors/door_closed.png" id="5_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://d2w7x0gsoclsi" path="res://Assets/Main_menu/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/play/72px/play02.png" id="6_dy7ct"]
 [ext_resource type="AudioStream" uid="uid://bclpg88a8f35n" path="res://Assets/Music/Main_menu.mp3" id="6_nlkkf"]
 
@@ -52,7 +52,7 @@ offset_top = -32.0
 offset_right = 31.0
 offset_bottom = 118.57143
 grow_horizontal = 2
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("5_nlkkf")
 expand_mode = 5
 stretch_mode = 5
 

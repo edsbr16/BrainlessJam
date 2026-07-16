@@ -1,8 +1,8 @@
 extends Control
 
 # Load door images into memory
-var closed_door = preload("res://Assets/Main_menu/door_closed.png")
-var open_door = preload("res://Assets/Main_menu/door_open.png")
+var closed_door = preload("res://Assets/Main_menu/Doors/door_closed.png")
+var open_door = preload("res://Assets/Main_menu/Doors/door_open.png")
 
 # Reference to door image node
 @onready var door_node = $"Door Image"
