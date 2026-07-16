@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cqo86k1wot8u7" path="res://Assets/Sprites/Room1 Books/bookshelfSide.png" id="9_wcuau"]
 [ext_resource type="Texture2D" uid="uid://bivyxhptcb3nx" path="res://Assets/Sprites/Room1 Books/bookshelf.png" id="10_vn8wn"]
 [ext_resource type="Texture2D" uid="uid://cny6t8yws7sqf" path="res://Assets/Sprites/Room1 Books/booksStack1.png" id="14_dt6yy"]
+[ext_resource type="Script" uid="uid://dny21kivxh3os" path="res://Scenes/room1_bookkeeper/area_2d.gd" id="14_e2mqt"]
 [ext_resource type="Texture2D" uid="uid://c07obvawgc6s" path="res://Assets/Sprites/Room1 Books/book.png" id="15_nqmtt"]
 [ext_resource type="Texture2D" uid="uid://b77y3kr5jlf5u" path="res://Assets/Sprites/Room1 Books/cabinet1.png" id="16_3qjdm"]
 [ext_resource type="Texture2D" uid="uid://ctfj0l8m5dnxh" path="res://Assets/Sprites/Room1 Books/cabinet1Side.png" id="17_pigo1"]
@@ -23,9 +24,11 @@
 [ext_resource type="Texture2D" uid="uid://cw602e7onqm42" path="res://Assets/Sprites/Room1 Books/desk.png" id="29_86yvr"]
 [ext_resource type="PackedScene" uid="uid://djouu44wxpwuu" path="res://Scenes/Player/player.tscn" id="35_2jglh"]
 [ext_resource type="Texture2D" uid="uid://b3yvar7d2cxbb" path="res://Assets/Sprites/Room1 Books/diningTablelarge.png" id="35_2qeii"]
+[ext_resource type="Script" uid="uid://dlw72mkqdx1p" path="res://Scenes/room1_bookkeeper/clue_display.gd" id="36_cskel"]
 [ext_resource type="Texture2D" uid="uid://cpis0lbr1y65y" path="res://Assets/Sprites/Room2 Tech/Book.png" id="36_e2mqt"]
 [ext_resource type="Script" uid="uid://b8du77d0ch8w6" path="res://Scenes/room1_bookkeeper/grid_container.gd" id="37_8unjh"]
 [ext_resource type="Texture2D" uid="uid://bx4ppjvx77vb5" path="res://Assets/Sprites/Room2 Tech/PuzzleGame.png" id="38_eudwp"]
+[ext_resource type="FontFile" uid="uid://dgpptqa0h3g2n" path="res://Assets/Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="39_8unjh"]
 [ext_resource type="Texture2D" uid="uid://by6g2b74xaiiq" path="res://Assets/Sprites/Room1 Books/easelDark.png" id="39_h6eba"]
 [ext_resource type="Texture2D" uid="uid://byxdvu7wvcqi1" path="res://Assets/Sprites/Room1 Books/easelLight.png" id="40_o5hl4"]
 [ext_resource type="Texture2D" uid="uid://bj3etn3r0inr0" path="res://Assets/Sprites/Room1 Books/entryway.png" id="41_2xqni"]
@@ -127,7 +130,7 @@ sources/7 = SubResource("TileSetAtlasSource_4ng7k")
 size = Vector2(18, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oue4"]
-size = Vector2(320, 16)
+size = Vector2(320, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_us1qg"]
 size = Vector2(146, 4)
@@ -147,6 +150,9 @@ size = Vector2(23, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dlw"]
 size = Vector2(27, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exbhh"]
+size = Vector2(24, 15)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3no4s"]
 size = Vector2(55, 14)
 
@@ -164,6 +170,18 @@ size = Vector2(20, 10.294212)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nok1o"]
 size = Vector2(20, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8unjh"]
+size = Vector2(13, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eudwp"]
+size = Vector2(100, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_622cn"]
+size = Vector2(22, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdjlh"]
+size = Vector2(12, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_exbhh"]
 atlas = ExtResource("27_aedsq")
@@ -225,18 +243,6 @@ animations = [{
 "name": &"default",
 "speed": 2.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8unjh"]
-size = Vector2(13, 39)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eudwp"]
-size = Vector2(100, 15)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_622cn"]
-size = Vector2(22, 18)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdjlh"]
-size = Vector2(12, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3isl"]
 atlas = ExtResource("38_eudwp")
@@ -304,9 +310,6 @@ region = Rect2(52, 78, 26, 26)
 tile_map_data = PackedByteArray("AAAGAAYABgABAAAAACAGAAcABQAAAAAAAAAHAAYABgACAAAAACAHAAcABQABAAAAAAAEAAQABQAAAAEAAAAEAAUABQAAAAAAAAAFAAQABQABAAEAAAAFAAUABgAAAAAAAAACAAQABQAAAAEAAAACAAUABQAAAAAAAAADAAQABQABAAEAAAADAAUABQABAAAAAAACAAIABQABAAEAAAACAAMABQAAAAAAAAADAAIABQAAAAEAAAADAAMABQABAAAAAAACAAAABwAAAAAAAAACAAEABwAAAAEAAAADAAAABwABAAAAAAADAAEABwABAAEAAAAAAAAABwAAAAAAAAAAAAEABwAAAAEAAAABAAAABwABAAAAAAABAAEABwABAAEAAAAAAAIABQAAAAEAAAAAAAMABQAAAAAAAAABAAIABQABAAEAAAABAAMABQABAAAAAAAAAAQABQAAAAEAAAAAAAUABQAAAAAAAAABAAQABQABAAEAAAABAAUABQABAAAAAAAAAAYABQAAAAEAAAAAAAcABQAAAAAAAAABAAYABQABAAEAAAABAAcABQABAAAAAAAAAAgABQAAAAEAAAAAAAkABQAAAAAAAAABAAgABQABAAEAAAABAAkABQABAAAAAAAAAAoABQAAAAEAAAAAAAsABAABAAMAAAABAAoABQABAAEAAAABAAsABAABAAMAAAACAAsABAACAAMAAAADAAoABQAAAAEAAAADAAsABAABAAMAAAACAAgABQAAAAEAAAACAAkABQABAAAAAAADAAgABQABAAEAAAADAAkABQAAAAAAAAAEAAgABQAAAAEAAAAEAAkABQABAAAAAAAFAAgABQABAAEAAAAFAAkABQAAAAAAAAAGAAgABQAAAAEAAAAGAAkABQABAAAAAAAHAAgABQABAAEAAAAHAAkABQAAAAAAAAAEAAoABQABAAEAAAAEAAsABAACAAMAAAAFAAoABQAAAAEAAAAFAAsABAABAAMAAAAGAAoABQABAAEAAAAGAAsABAACAAMAAAAHAAoABQAAAAEAAAAHAAsABAABAAMAAAAIAAoABQABAAEAAAAIAAsABAACAAMAAAAJAAoABQAAAAEAAAAJAAsABAABAAMAAAAKAAoABQABAAEAAAAKAAsABAACAAMAAAALAAoABQAAAAEAAAALAAsABAABAAMAAAAKAAgABQAAAAEAAAAKAAkABQABAAAAAAALAAgABQABAAEAAAALAAkABQAAAAAAAAAMAAgABQAAAAEAAAAMAAkABQABAAAAAAANAAgABQABAAEAAAANAAkABQAAAAAAAAAOAAgABQAAAAEAAAAOAAkABQABAAAAAAAPAAgABQABAAEAAAAPAAkABQAAAAAAAAAOAAoABQABAAEAAAAOAAsABAACAAMAAAAPAAoABQAAAAEAAAAPAAsABAABAAMAAAAMAAoABQABAAEAAAAMAAsABAACAAMAAAANAAoABQAAAAEAAAANAAsABAABAAMAAAAQAAoABQABAAEAAAAQAAsABAACAAMAAAARAAoABQAAAAEAAAARAAsABAABAAMAAAASAAoABQAAAAEAAAASAAsABAACAAMAAAATAAoABQABAAEAAAATAAsABAABAAMAAAASAAgABQAAAAEAAAASAAkABQAAAAAAAAATAAgABQABAAEAAAATAAkABQABAAAAAAASAAYABQAAAAEAAAASAAcABQAAAAAAAAATAAYABQABAAEAAAATAAcABQABAAAAAAASAAQABQAAAAEAAAASAAUABQAAAAAAAAATAAQABQABAAEAAAATAAUABQABAAAAAAASAAIABQAAAAEAAAASAAMABQAAAAAAAAATAAIABQABAAEAAAATAAMABQABAAAAAAASAAAABwAAAAAAAAASAAEABwAAAAEAAAATAAAABwABAAAAAAATAAEABwABAAEAAAAQAAAABwAAAAAAAAAQAAEABwAAAAEAAAARAAAABwABAAAAAAARAAEABwABAAEAAAAOAAAABwAAAAAAAAAOAAEABwAAAAEAAAAPAAAABwABAAAAAAAPAAEABwABAAEAAAAMAAAABwAAAAAAAAAMAAEABwAAAAEAAAANAAAABwABAAAAAAANAAEABwABAAEAAAAKAAAABwAAAAAAAAAKAAEABwAAAAEAAAALAAAABwABAAAAAAALAAEABwABAAEAAAAIAAAABwAAAAAAAAAIAAEABwAAAAEAAAAJAAAABwABAAAAAAAJAAEABwABAAEAAAAGAAAABwAAAAAAAAAGAAEABwAAAAEAAAAHAAAABwABAAAAAAAHAAEABwABAAEAAAAEAAAABwAAAAAAAAAEAAEABwAAAAEAAAAFAAAABwABAAAAAAAFAAEABwABAAEAAAACAAYABQAAAAEAAAACAAcABQAAAAAAAAADAAYABQABAAEAAAADAAcABQABAAAAAAAEAAYABQAAAAEAAAAEAAcABQAAAAAAAAAFAAYABgAAAAAAACAFAAcABQABAAAAAAAGAAQABQAAAAEAAAAGAAUABgABAAAAAAAHAAUABgACAAAAAAAEAAIABQABAAEAAAAEAAMABQAAAAAAAAAFAAIABQAAAAEAAAAFAAMABQABAAAAAAAGAAIABQABAAEAAAAGAAMABQAAAAAAAAAHAAIABQAAAAEAAAAHAAMABQABAAAAAAAIAAIABQABAAEAAAAIAAMABQAAAAAAAAAJAAIABQAAAAEAAAAJAAMABQABAAAAAAAKAAIABQABAAEAAAAKAAMABQAAAAAAAAALAAIABQAAAAEAAAALAAMABQABAAAAAAAMAAIABQABAAEAAAAMAAMABQAAAAAAAAANAAIABQAAAAEAAAANAAMABQABAAAAAAAOAAIABQABAAEAAAAOAAMABQAAAAAAAAAPAAIABQAAAAEAAAAPAAMABQABAAAAAAAQAAIABQABAAEAAAAQAAMABQAAAAAAAAARAAIABQABAAEAAAARAAMABQABAAAAAAAQAAQABQAAAAEAAAAQAAUABQAAAAAAAAARAAQABQABAAEAAAARAAUABQABAAAAAAAQAAYABQAAAAEAAAAQAAcABQAAAAAAAAARAAYABQABAAEAAAARAAcABQABAAAAAAAQAAgABQAAAAEAAAAQAAkABQABAAAAAAARAAgABQABAAEAAAARAAkABQAAAAAAAAAIAAgABQAAAAEAAAAIAAkABQABAAAAAAAJAAgABQABAAEAAAAJAAkABQAAAAAAAAAIAAUABgADAAAAAAAJAAUABgAEAAAAAAAMAAUABgADAAAAAAANAAUABgAEAAAAAAAMAAYABgADAAAAACAMAAcABQAAAAAAAAANAAYABgAEAAAAACANAAcABQABAAAAAAAKAAYABgABAAAAACAKAAcABQAAAAAAAAALAAYABgACAAAAACALAAcABQABAAAAAAAIAAYABgADAAAAACAIAAcABQAAAAAAAAAJAAYABgAEAAAAACAJAAcABQABAAAAAAAKAAUABgABAAAAAAALAAUABgACAAAAAAAOAAQABQAAAAEAAAAOAAUABgAAAAAAABAPAAQABQABAAEAAAAPAAUABQABAAAAAAAOAAYABgAFAAAAACAOAAcABQAAAAAAAAAPAAYABQABAAEAAAAPAAcABQABAAAAAAACAAoABQABAAEAAAAHAAQABQABAAEAAAAIAAQABQAAAAEAAAAJAAQABQABAAEAAAAKAAQABQAAAAEAAAALAAQABQABAAEAAAAMAAQABQAAAAEAAAANAAQABQABAAEAAAA=")
 tile_set = SubResource("TileSet_4ng7k")
 
-[node name="player" parent="." unique_id=121331350 instance=ExtResource("35_2jglh")]
-position = Vector2(66, 82)
-
 [node name="Entryway" type="Sprite2D" parent="." unique_id=685032087]
 position = Vector2(155, 164)
 texture = ExtResource("41_2xqni")
@@ -323,7 +326,7 @@ shape = SubResource("RectangleShape2D_2jglh")
 [node name="WallTop" type="StaticBody2D" parent="Walls" unique_id=1485522896]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallTop" unique_id=956630088]
-position = Vector2(160, 9)
+position = Vector2(160, 10.5)
 shape = SubResource("RectangleShape2D_6oue4")
 
 [node name="WallBottom" type="StaticBody2D" parent="Walls" unique_id=1975629696]
@@ -350,87 +353,7 @@ shape = SubResource("RectangleShape2D_e2mqt")
 
 [node name="Decor" type="Node2D" parent="." unique_id=577711594]
 
-<<<<<<< HEAD
 [node name="Desk2Drawers2" type="Sprite2D" parent="Decor" unique_id=412007370]
-=======
-[node name="BookShelfs" type="StaticBody2D" parent="Stands" unique_id=1880590952]
-
-[node name="BookshelfBackWall" type="Sprite2D" parent="Stands/BookShelfs" unique_id=1619478616]
-position = Vector2(57, 22)
-texture = ExtResource("10_vn8wn")
-
-[node name="Bookshelf2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=204361749]
-position = Vector2(-29, 0)
-texture = ExtResource("10_vn8wn")
-
-[node name="Bookshelf" type="Sprite2D" parent="Stands/BookShelfs/BookshelfBackWall" unique_id=81183527]
-position = Vector2(29, 0)
-texture = ExtResource("10_vn8wn")
-
-[node name="BookshelfLeftSide" type="Sprite2D" parent="Stands/BookShelfs" unique_id=658714100]
-position = Vector2(12, 22)
-texture = ExtResource("9_wcuau")
-
-[node name="BookshelfSide" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=163627667]
-position = Vector2(0, 10)
-texture = ExtResource("9_wcuau")
-
-[node name="BookshelfSide2" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=467142933]
-position = Vector2(0, 20)
-texture = ExtResource("9_wcuau")
-
-[node name="BookshelfSide3" type="Sprite2D" parent="Stands/BookShelfs/BookshelfLeftSide" unique_id=372682940]
-position = Vector2(0, 30)
-texture = ExtResource("9_wcuau")
-
-[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=442540318]
-position = Vector2(7.5, 25.5)
-shape = SubResource("RectangleShape2D_8unjh")
-
-[node name="CollisionShapeBack" type="CollisionShape2D" parent="Stands/BookShelfs" unique_id=1209248262]
-position = Vector2(50, 13.5)
-shape = SubResource("RectangleShape2D_eudwp")
-
-[node name="Cabinets" type="StaticBody2D" parent="Stands" unique_id=1262127392]
-
-[node name="Cabinet1" type="Sprite2D" parent="Stands/Cabinets" unique_id=2098838985]
-position = Vector2(263, 26)
-texture = ExtResource("16_3qjdm")
-
-[node name="Cabinet1Side2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1048487955]
-position = Vector2(306, 21)
-texture = ExtResource("17_pigo1")
-
-[node name="Cabinet1Side4" type="Sprite2D" parent="Stands/Cabinets" unique_id=1318959443]
-position = Vector2(306, 28)
-texture = ExtResource("17_pigo1")
-
-[node name="Cabinet1Side" type="Sprite2D" parent="Stands/Cabinets" unique_id=1418261936]
-position = Vector2(306, 35)
-texture = ExtResource("17_pigo1")
-
-[node name="Desk2DrawersSide2" type="Sprite2D" parent="Stands/Cabinets" unique_id=1752331236]
-position = Vector2(306, 47)
-texture = ExtResource("28_pknr0")
-
-[node name="Desk2DrawersSide" type="Sprite2D" parent="Stands/Cabinets" unique_id=1612897180]
-position = Vector2(306, 55)
-texture = ExtResource("28_pknr0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=957987440]
-position = Vector2(263, 17.5)
-shape = SubResource("RectangleShape2D_622cn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stands/Cabinets" unique_id=1533975234]
-position = Vector2(314, 28.5)
-shape = SubResource("RectangleShape2D_cdjlh")
-
-[node name="CoatHanger" type="Sprite2D" parent="." unique_id=1636032222]
-position = Vector2(303, 154)
-texture = ExtResource("21_h86e8")
-
-[node name="Desk2Drawers2" type="Sprite2D" parent="." unique_id=412007370]
->>>>>>> ec5b1a63aa3cc3d1bee7908c870f3413e1c41629
 position = Vector2(189, 30)
 texture = ExtResource("27_l814r")
 
@@ -454,9 +377,16 @@ texture = ExtResource("29_86yvr")
 position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_j6dlw")
 
-[node name="Book" type="Sprite2D" parent="Decor/Desk" unique_id=469691692]
+[node name="Area2D" type="Area2D" parent="Decor/Desk" unique_id=1198764952]
 position = Vector2(0, -8)
+script = ExtResource("14_e2mqt")
+
+[node name="Book" type="Sprite2D" parent="Decor/Desk/Area2D" unique_id=469691692]
 texture = ExtResource("15_nqmtt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decor/Desk/Area2D" unique_id=46332631]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_exbhh")
 
 [node name="DiningTablelarge" type="Sprite2D" parent="Decor" unique_id=799246881]
 position = Vector2(157, 91)
@@ -554,36 +484,6 @@ texture = ExtResource("76_uiiyi")
 position = Vector2(-170, -1)
 texture = ExtResource("76_uiiyi")
 
-[node name="Animated Objects" type="Node2D" parent="Decor" unique_id=718540480]
-position = Vector2(298, 150)
-
-[node name="Stool" type="Sprite2D" parent="Decor/Animated Objects" unique_id=1077940752]
-texture = ExtResource("79_l814r")
-
-[node name="Standing Lamp" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1449245126]
-position = Vector2(13, -75)
-sprite_frames = SubResource("SpriteFrames_v3crd")
-frame_progress = 0.23195288
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Decor/Animated Objects/Standing Lamp" unique_id=729766975]
-position = Vector2(-1, -11)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decor/Animated Objects/Standing Lamp/StaticBody2D" unique_id=1089107087]
-position = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_3ud5v")
-
-[node name="Lamp" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1922410843]
-position = Vector2(-142, -65)
-sprite_frames = SubResource("SpriteFrames_bo5j8")
-animation = &"new_animation"
-frame_progress = 0.04786795
-
-[node name="Canvas" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1179127842]
-position = Vector2(1, -26)
-sprite_frames = SubResource("SpriteFrames_fngoh")
-frame = 1
-frame_progress = 1.0
-
 [node name="Stands" type="Node2D" parent="Decor" unique_id=856150286]
 
 [node name="BookShelfs" type="StaticBody2D" parent="Decor/Stands" unique_id=1880590952]
@@ -617,11 +517,11 @@ position = Vector2(0, 30)
 texture = ExtResource("9_wcuau")
 
 [node name="CollisionShapeLeft" type="CollisionShape2D" parent="Decor/Stands/BookShelfs" unique_id=442540318]
-position = Vector2(7.5, 25.5)
+position = Vector2(7.5, 31)
 shape = SubResource("RectangleShape2D_8unjh")
 
 [node name="CollisionShapeBack" type="CollisionShape2D" parent="Decor/Stands/BookShelfs" unique_id=1209248262]
-position = Vector2(50, 10.5)
+position = Vector2(50, 14)
 shape = SubResource("RectangleShape2D_eudwp")
 
 [node name="Cabinets" type="StaticBody2D" parent="Decor/Stands" unique_id=1262127392]
@@ -658,9 +558,43 @@ shape = SubResource("RectangleShape2D_622cn")
 position = Vector2(314, 28.5)
 shape = SubResource("RectangleShape2D_cdjlh")
 
+[node name="Animated Objects" type="Node2D" parent="Decor" unique_id=718540480]
+position = Vector2(298, 150)
+
+[node name="Stool" type="Sprite2D" parent="Decor/Animated Objects" unique_id=1077940752]
+texture = ExtResource("79_l814r")
+
+[node name="Standing Lamp" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1449245126]
+position = Vector2(14, -87)
+sprite_frames = SubResource("SpriteFrames_v3crd")
+frame_progress = 0.23195288
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Decor/Animated Objects/Standing Lamp" unique_id=729766975]
+position = Vector2(-1, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decor/Animated Objects/Standing Lamp/StaticBody2D" unique_id=1089107087]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_3ud5v")
+
+[node name="Lamp" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1922410843]
+position = Vector2(-142, -65)
+sprite_frames = SubResource("SpriteFrames_bo5j8")
+animation = &"new_animation"
+frame_progress = 0.04786795
+
+[node name="Canvas" type="AnimatedSprite2D" parent="Decor/Animated Objects" unique_id=1179127842]
+position = Vector2(1, -26)
+sprite_frames = SubResource("SpriteFrames_fngoh")
+frame = 1
+frame_progress = 1.0
+
+[node name="player" parent="." unique_id=121331350 instance=ExtResource("35_2jglh")]
+position = Vector2(66, 82)
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=1036675859]
 
 [node name="ClueDisplay" type="Control" parent="UI" unique_id=904996178]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -669,6 +603,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("36_cskel")
 
 [node name="BookImage" type="TextureRect" parent="UI/ClueDisplay" unique_id=1940483474]
 layout_mode = 0
@@ -692,6 +627,7 @@ offset_top = -71.0
 offset_right = 104.0
 offset_bottom = -48.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_8unjh")
 theme_override_font_sizes/font_size = 15
 text = "The Bookkeeper's Puzzle"
 horizontal_alignment = 1
@@ -704,6 +640,7 @@ offset_right = -15.0
 offset_bottom = 61.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("39_8unjh")
 theme_override_font_sizes/font_size = 6
 text = "How to play:
 1. Slide the tiles to rearrange them.
@@ -817,15 +754,23 @@ offset_bottom = 71.0
 texture = ExtResource("38_eudwp")
 expand_mode = 1
 
-[node name="SuccessLabel" type="Label" parent="UI/ClueDisplay" unique_id=696479700]
-visible = false
+[node name="SuccessLabel" type="TextureRect" parent="UI/ClueDisplay" unique_id=1103175253]
 layout_mode = 0
-offset_left = -108.0
-offset_top = -72.0
-offset_right = 101.0
-offset_bottom = 73.0
+offset_left = -121.0
+offset_top = -76.0
+offset_right = 114.0
+offset_bottom = 84.0
+texture = ExtResource("36_e2mqt")
+
+[node name="SuccessLabel" type="Label" parent="UI/ClueDisplay/SuccessLabel" unique_id=696479700]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 221.0
+offset_bottom = 151.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("39_8unjh")
 theme_override_font_sizes/font_size = 12
 text = "Congratulations! You've completed the first task.
 

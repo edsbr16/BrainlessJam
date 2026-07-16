@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dft7n8imwdsqg" path="res://Assets/Sprites/player/16x16 Walk-Sheet.png" id="1_xpcdj"]
 [ext_resource type="Texture2D" uid="uid://bfu6ad5wv0b7c" path="res://Assets/Sprites/player/16x16 Idle-Sheet.png" id="2_mtuoh"]
 [ext_resource type="Texture2D" uid="uid://dod2luq2gf6hu" path="res://Assets/Sprites/player/16x16 Interact-Sheet.png" id="3_htcer"]
+[ext_resource type="FontFile" uid="uid://dgpptqa0h3g2n" path="res://Assets/Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="5_htcer"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7g0yx"]
 atlas = ExtResource("2_mtuoh")
@@ -311,6 +312,10 @@ size = Vector2(12, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htcer"]
 size = Vector2(14, 16)
 
+[sub_resource type="LabelSettings" id="LabelSettings_dd0ac"]
+font = ExtResource("5_htcer")
+font_size = 6
+
 [node name="player" type="CharacterBody2D" unique_id=121331350]
 position = Vector2(157, 83)
 script = ExtResource("1_mtuoh")
@@ -332,3 +337,12 @@ shape = SubResource("RectangleShape2D_mtuoh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1148568757]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_htcer")
+
+[node name="InteractPrompt" type="Label" parent="." unique_id=2113403310]
+visible = false
+offset_left = 5.0
+offset_top = -8.0
+offset_right = 22.0
+offset_bottom = -1.0
+text = "Press E"
+label_settings = SubResource("LabelSettings_dd0ac")

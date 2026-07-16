@@ -1,21 +1,20 @@
 extends GridContainer
 
+signal solved
+
 const GRID_SIZE = 4
 var tiles: Array = []
-var piece_ids: Array = []  # tracks which "correct piece" is in each slot
+var piece_ids: Array = []
 var empty_index: int = 15
 
 func _ready() -> void:
-	columns = GRID_SIZE  # ensures GridContainer wraps into 4 columns
-
+	columns = GRID_SIZE
 	tiles = get_children()
 
-	# Assign each tile its correct "home" ID (0-15) based on starting order
 	for i in range(tiles.size()):
 		piece_ids.append(i)
 		tiles[i].pressed.connect(_on_tile_pressed.bind(i))
 
-	# Hide the empty tile visually (make it blank)
 	tiles[empty_index].texture_normal = null
 	tiles[empty_index].disabled = true
 
@@ -67,12 +66,4 @@ func check_win() -> void:
 	for i in range(piece_ids.size()):
 		if piece_ids[i] != i:
 			return
-	on_puzzle_solved()
-
-func on_puzzle_solved() -> void:
-	# Hide the puzzle elements
-	visible = false  # hides the GridContainer itself (this script is attached to it)
-	get_parent().get_node("PuzzleView").visible = false
-	get_parent().get_node("SuccessView").visible = true
-	
-	get_tree().call_group("door", "unlock")
+	emit_signal("solved")
