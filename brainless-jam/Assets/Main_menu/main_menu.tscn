@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ddbapdmjo26r6"]
+
+[ext_resource type="Script" uid="uid://dgqruk7tit7hn" path="res://Assets/Main_menu/main_menu.gd" id="1_i2j22"]
+[ext_resource type="Texture2D" uid="uid://dwenkupmn4xbf" path="res://Assets/Main_menu/play_button/72px/play01.png" id="2_mspvd"]
+[ext_resource type="Texture2D" uid="uid://do8d47nxu35yp" path="res://Assets/Main_menu/play_button/72px/play03.png" id="3_awfhm"]
+[ext_resource type="Texture2D" uid="uid://d2w7x0gsoclsi" path="res://Assets/Main_menu/play_button/72px/play02.png" id="4_md68w"]
+[ext_resource type="Texture2D" uid="uid://d20dby7nquitq" path="res://Assets/Main_menu/Doors/doubleDoors-closed.png" id="5_1b8ik"]
+[ext_resource type="AudioStream" uid="uid://bclpg88a8f35n" path="res://Assets/Music/Main_menu.mp3" id="6_fi7qn"]
+
+[node name="MainMenu" type="Control" unique_id=1535673152]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2j22")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1244695223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2, 0.22745098, 0.26666668, 1)
+
+[node name="PlayButton" type="TextureButton" parent="." unique_id=1478975427]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -72.0
+offset_right = 72.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_mspvd")
+texture_pressed = ExtResource("3_awfhm")
+texture_hover = ExtResource("4_md68w")
+
+[node name="Door Image" type="TextureRect" parent="." unique_id=144755433]
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 96.588234
+grow_horizontal = 2
+texture = ExtResource("5_1b8ik")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="." unique_id=1900307542]
+stream = ExtResource("6_fi7qn")
+volume_db = -8.4
+autoplay = true
+parameters/looping = true
+
+[connection signal="mouse_entered" from="PlayButton" to="." method="open_on_hover"]
+[connection signal="mouse_exited" from="PlayButton" to="." method="close_no_hover"]
+[connection signal="pressed" from="PlayButton" to="." method="play_button_pressed"]
